@@ -17,13 +17,12 @@ using std::string;
 float CylinderArea(float CylinderRadius, float CylinderHeight) {
   // variables for calculating surface area
   float TotalArea;
-  float fourmula_1;
-  float fourmula_2;
-  fourmula_1 = 2 * M_PI * CylinderRadius * CylinderHeight;
-  fourmula_2 = 2 * M_PI * CylinderRadius * CylinderRadius;
-  TotalArea = fourmula_1 + fourmula_2;
+  float fourmula1;
+  float fourmula2;
+  fourmula1 = 2 * M_PI * CylinderRadius * CylinderHeight;
+  fourmula2 = 2 * M_PI * CylinderRadius * CylinderRadius;
+  TotalArea = fourmula1 + fourmula2;
   return TotalArea;
-  
 }
 
 int main() {
@@ -52,9 +51,8 @@ while (PlayAgain == "y") {
     std::cin >> InputHeightString;
     std::cout << "Enter the radius (cm): ";
     std::cin >> InputRadiusString;
-      
+
     try {
-      
       // convert user input from string to float
       InputHeightFloat = std::stof(InputHeightString);
       InputRadiusFloat = std::stof(InputRadiusString);
@@ -66,11 +64,10 @@ while (PlayAgain == "y") {
 << std::endl;
 
       } else {
-         // calling the function with 2 arguments
-         CallingFunction = CylinderArea(InputRadiusFloat, InputHeightFloat);
-         std::cout << std::fixed << std::setprecision(2) <<
-  "The surface area of the cylinder is " << CallingFunction <<" cm²" << std::endl;
-
+        // calling the function with 2 arguments
+        CallingFunction = CylinderArea(InputRadiusFloat, InputHeightFloat);
+        std::cout << std::fixed << std::setprecision(2) <<
+        "The surface area of the cylinder is " << CallingFunction <<" cm²" << std::endl;
       }
   }
     // Display invalid input
